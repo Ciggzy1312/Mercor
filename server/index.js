@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 app.use(bodyParser.json());
-app.use(cors({ origin: ['http://localhost:5173', 'https://mercor-client.onrender.com/'] }));
+app.use(cors({ origin: ['http://localhost:5173', 'https://mercor-client.onrender.com'] }));
 
 const gpt = require('./gpt');
 
