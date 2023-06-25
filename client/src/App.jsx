@@ -43,7 +43,7 @@ function App() {
   }
 
   const handleSubmit = async () => {
-    const res = await axios.post(import.meta.env.VITE_DEPLOYMENT_ENV == 'dev' ? 'http://localhost:5000/' : '', { question: ref.current.innerText });
+    const res = await axios.post(import.meta.env.VITE_DEPLOYMENT_ENV == 'dev' ? 'http://localhost:5000/' : 'https://mercor-a5yd.onrender.com/', { question: ref.current.innerText });
 
     setAnswer(res.data.answer);
     const u = new SpeechSynthesisUtterance(res.data.answer);
